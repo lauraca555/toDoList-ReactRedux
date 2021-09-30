@@ -13,7 +13,7 @@ export const removeTodo = text => ({
 });
 
 export const COMPLETED_TODO = 'COMPLETED_TODO';
-export const completesTodo = text => ({
+export const completedTodo = text => ({
     type: COMPLETED_TODO,
     payload: { text }
 });
