@@ -9,7 +9,6 @@ import './TodoList.css';
 const TodoList = ({ todos = [], onRemovePressed,  onCompletedPressed, isLoading, startLoadingTodos }) => {
     useEffect(() => {
         startLoadingTodos();
-
     }, []);
     const loadingMessage = <div>Loading todos...</div>;
     const content = (
@@ -30,7 +29,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    startLoadingTodos: () => dispatch(loadTodos),
+    startLoadingTodos: () => dispatch(loadTodos()),
     onRemovePressed: text => dispatch(removeTodo(text)),
     onCompletedPressed: text => dispatch(completedTodo(text))
 });
