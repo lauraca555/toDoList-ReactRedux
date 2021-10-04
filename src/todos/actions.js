@@ -6,9 +6,9 @@ export const createTodo = todo => ({
 });
 
 export const REMOVE_TODO = 'REMOVE_TODO';
-export const removeTodo = text => ({
+export const removeTodo = todo => ({
     type: REMOVE_TODO,
-    payload: { text }
+    payload: { todo }
 });
 
 export const COMPLETED_TODO = 'COMPLETED_TODO';
@@ -17,7 +17,6 @@ export const completedTodo = text => ({
     payload: { text }
 });
 
-///thunks actions
 
 export const LOAD_TODOS_IN_PROGRESS = 'LOAD_TODOS_IN_PROGRESS';
 export const loadTodosInProgress = () => ({
